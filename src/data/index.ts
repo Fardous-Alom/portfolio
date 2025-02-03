@@ -1,5 +1,3 @@
-import { link } from "fs";
-
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
