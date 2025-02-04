@@ -1,5 +1,5 @@
 import { navItems } from "@/data";
-import { FloatingNav } from "./components/ui/FloatingNavbar";
+import { FloatingNav } from "./components/FloatingNavbar.tsx";
 import Hero from "./components/Hero.tsx";
 import About from "./components/About.tsx";
 import Project from "./components/Project.tsx";

@@ -1,4 +1,4 @@
-import { Skill } from "./Skill";
+import Skill from "./Skill";
 import { BorderBeam } from "@/components/ui/border-beam";
 
 
