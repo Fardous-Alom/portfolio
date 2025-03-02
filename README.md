@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# NexTemp | A Next.js Personal Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![NexTemp - A Next.js Personal Web App](https://github.com/lilxyzz/nextemp/blob/main/public/NexTemp-cover.png)
 
-Currently, two official plugins are available:
+NexTemp - A bespoke **template** for your **next** web project. NexTemp is a personal portfolio and blog theme built around Next.js. It features a modern, clean, and responsive design, perfect for developers or anyone looking to showcase their work and ideas. For more themes and updates, stay tuned.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📚 Tech Stack
+Next.js 14+
+React 18+
+Tailwind CSS 3+
+Framer Motion 11+
 
-## Expanding the ESLint configuration
+## ✨ Features
+- Dark and light color mode 
+- Reusable Components
+- Blog post creation
+- Animations with Framer Motion
+- Tailwind CSS integration
+- Mobile-first responsive layout
+- Sitemap support
+- 95+ Lighthouse
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 NexTemp Pro Coming Soon
+**Features**
+- SEO optimised 
+- Post tags and categories
+- Integration with Hashnode CMS for easy post publishing
+- PWA support
+  
 
-- Configure the top-level `parserOptions` property like this:
+### 🛠️ Requirements
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Node 18+
+  - https://nodejs.org/en
+- Yarn
+  - https://classic.yarnpkg.com/en/docs/getting-started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🎬 Getting Started
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/lilxyzz/nextemp.git
+    ```
+
+2. Navigate into the repository:
+    ```bash
+    cd NexTemp
+    ```
+
+3. Install the dependencies:
+    ```bash
+    yarn
+    ```
+
+4. Run the development server:
+    ```bash
+    yarn dev
+    ```
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+#### 🙏 Thanks
+If you like this theme, don't forget to give it a ⭐.
+
+#### 🤝 Contributing
+Got enhancements you envision? Contributions are welcome! Fork the repo, push your changes, and submit a pull request. Let's make this theme better, together.
+
+#### 👾 Issues
+For any challenges encountered, please feel free to report issues through our issue tracker.
+
+#### 📝 License
+This project is open source and available under the MIT License.
