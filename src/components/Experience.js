@@ -62,7 +62,7 @@ const Experience = () => {
             company="Barrack LifeStyle"
             time="2020 - 2024"
             address="200 Innovations st"
-            companyLink="https://github.com/lilxyzz/clay-theme"
+            companyLink=""
             work="At Barrack, I serve as a web developer, where I play a crucial role in designing and implementing cutting-edge web solutions. My responsibilities include developing responsive and high-performance websites and applications using technologies such as HTML, CSS, JavaScript, React, and Node.js. I collaborate closely with cross-functional teams to ensure our projects meet the highest standards of functionality and user experience. One of my key achievements at Stellar Innovations has been leading the development of a comprehensive e-commerce platform that significantly enhanced our client's online presence and sales. My work is driven by a passion for continuous learning and innovation, always striving to push the boundaries of what's possible in web development."
           />
 

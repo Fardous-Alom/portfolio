@@ -81,17 +81,6 @@ export default function Home() {
             </div>
           </div>
         </Layout>
-        <div className="fixed right-8 bottom-8 inline-block md:hidden">
-          <iframe
-            className="iframe"
-            title="Noongar Seasonal Calendar"
-            width="280"
-            height="120"
-            src="https://seasonal-au.netlify.app/"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
         <HireMe />
       </article>
     </>
