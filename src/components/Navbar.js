@@ -1,15 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "./Logo";
 import { useRouter } from "next/router";
-import {
-  MediumIcon,
-  DevIcon,
-  GithubIcon,
-  LinkedInIcon,
-  MoonIcon,
-  SunIcon,
-} from "./Icons";
+import { FaGithub, FaLinkedin, FaTwitter, FaSun, FaMoon } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useThemeSwitch } from "./Hooks/useThemeSwitch";
 
@@ -110,8 +102,8 @@ const Navbar = () => {
           <CustomLink className="mr-4" href="/" title="Home" />
           <CustomLink className="mx-4" href="/about" title="About" />
           <CustomLink className="mx-4" href="/projects" title="Projects" />
-          <CustomLink className="ml-4" href="/articles" title="Articles" />
         </nav>
+        {/* right side menu */}
         <nav
           className="flex items-center justify-center flex-wrap lg:mt-2
       "
@@ -124,39 +116,30 @@ const Navbar = () => {
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my GitHub profile"
           >
-            <GithubIcon />
+            <FaGithub className="w-full h-full" />
           </motion.a>
 
           <motion.a
             target={"_blank"}
-            className="w-7 mx-3 bg-light rounded-full"
-            href="https://medium.com/@travis.lord"
+            className="w-7 mx-3 rounded-full"
+            href="https://www.linkedin.com/in/fardous-alom/"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Medium profile"
           >
-            <MediumIcon />
+            <FaLinkedin className="w-full h-full" />
           </motion.a>
 
           <motion.a
             target={"_blank"}
             className="w-7 mx-3"
-            href="https://dev.to/lilxyzz"
+            href="https://x.com/Fardoustw"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Dev.to profile"
           >
-            <DevIcon />
+            <FaTwitter className="w-full h-full" />
           </motion.a>
-
-          <motion.a
-            target={"_blank"}
-            className="w-7 mx-3"
-            href="https://dev.to/lilxyzz"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="My Dev.to profile"
-          ></motion.a>
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -166,13 +149,14 @@ const Navbar = () => {
             aria-label="theme-switcher"
           >
             {mode === "light" ? (
-              <SunIcon className={"fill-dark"} />
+              <FaSun className={"fill-white"} />
             ) : (
-              <MoonIcon className={"fill-dark"} />
+              <FaMoon className={"fill-dark"} />
             )}
           </button>
         </nav>
       </div>
+      {/* mobile menu */}
       {isOpen ? (
         <motion.div
           className="min-w-[70vw] sm:min-w-[90vw] h-[75vh] flex justify-between items-center flex-col fixed top-1/2 left-1/2 -translate-x-1/2
@@ -201,12 +185,12 @@ const Navbar = () => {
               href="/projects"
               title="Projects"
             />
-            <CustomMobileLink
+            {/* <CustomMobileLink
               toggle={handleClick}
               className="ml-4 lg:m-0 lg:my-2"
               href="/articles"
               title="Articles"
-            />
+            /> */}
             <CustomMobileLink
               toggle={handleClick}
               className="ml-4 lg:m-0 lg:my-2"
@@ -221,42 +205,34 @@ const Navbar = () => {
             <motion.a
               target={"_blank"}
               className="w-6 mr-3"
-              href="https://github.com/lilxyzz"
+              href="https://github.com/Fardous-Alom"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Checkout my Github profile"
             >
-              <GithubIcon />
+              <FaGithub className="w-full h-full" />
             </motion.a>
 
             <motion.a
               target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full"
-              href="https://medium.com/@travis.lord"
+              className="w-6 mx-3"
+              href="https://www.linkedin.com/in/fardous-alom/"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Checkout my Medium profile"
             >
-              <MediumIcon />
+              <FaLinkedin className="w-full h-full" />
             </motion.a>
             <motion.a
               target={"_blank"}
               className="w-6 mx-3"
-              href="https://dev.to/lilxyzz"
+              href="https://x.com/Fardoustw"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Checkout my Dev.to profile"
             >
-              <DevIcon />
+              <FaTwitter className="w-full h-full" />
             </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 mx-3"
-              href="https://dev.to/lilxyzz"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="My Dev.to profile"
-            ></motion.a>
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -266,18 +242,14 @@ const Navbar = () => {
               aria-label="theme-switcher"
             >
               {mode === "light" ? (
-                <SunIcon className={"fill-dark"} />
+                <FaSun className={"fill-white"} />
               ) : (
-                <MoonIcon className={"fill-dark"} />
+                <FaMoon className={"fill-dark"} />
               )}
             </button>
           </nav>
         </motion.div>
       ) : null}
-
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
-        <Logo />
-      </div>
     </header>
   );
 };

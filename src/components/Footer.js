@@ -16,13 +16,12 @@ const Footer = () => {
           Built <span className="text-2xl px-1"></span>
           {""}
           by&nbsp;
-          {/* <Link
-            href="https://travislord.xyz/"
+          <Link
+            href="/"
             className="underline underline-offset-2"
           >
             Fardous
-          </Link> */}
-          <p>Fardous</p>
+          </Link>
         </div>
       </Layout>
     </footer>

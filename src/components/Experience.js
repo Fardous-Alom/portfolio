@@ -78,7 +78,7 @@ const Experience = () => {
       </div>
       <div className="mt-40 flex items-center justify-between gap-3 grid-cols-2">
         <Link
-          href="/projects/"
+          href="/"
           target={"_self"}
           className={`flex items-center rounded-lg border-2 border-solid bg-light p-2.5 px-6 text-lg font-semibold
             capitalize text-dark hover:border-light hover:bg-dark hover:text-light 
@@ -86,10 +86,10 @@ const Experience = () => {
             md:p-2 md:px-4 md:text-base
              `}
         >
-          View Projects
+          Home
         </Link>
         <Link
-          href="/articles/"
+          href="/projects/"
           target={"_self"}
           className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
@@ -97,7 +97,7 @@ const Experience = () => {
             md:p-2 md:px-4 md:text-base
              `}
         >
-          View Articles
+          View Projects
         </Link>
       </div>
     </div>

@@ -6,10 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { HireMe2 } from "@/components/HireMe2";
-
+import { FaGithub } from "react-icons/fa";
 import proj1 from "../../public/images/projects/clay-theme.png";
+import drowit from "../../public/images/projects/drowit.png";
+import kanban from "../../public/images/projects/kanban.png";
 import loading from "../../public/images/articles/GTA6-VICE.gif";
-
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useMotionValue } from "framer-motion";
 
@@ -145,7 +146,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
             className="w-10"
             aria-label="github link"
           >
-            <GithubIcon />
+            <FaGithub className="w-full h-full" />
           </Link>
           <Link
             href={link}
@@ -165,7 +166,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
   );
 };
 
-const Project = ({ title, type, img, link, tools }) => {
+const Project = ({ title, type, summary, img, link, github, tools }) => {
   return (
     <article
       className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl 
@@ -207,12 +208,23 @@ const Project = ({ title, type, img, link, tools }) => {
             {title}
           </h2>
         </Link>
+        <p className=" my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
+          {summary}
+        </p>
         <div className="flex w-full items-center  justify-between">
+          <Link
+            href={github}
+            target={"_blank"}
+            className="w-10"
+            aria-label="github link"
+          >
+            <FaGithub className="w-full h-full" />
+          </Link>
           <Link
             href={link}
             className="rounded-lg
-             bg-dark mt-2 px-6 py-2 text-lg font-semibold
-             sm:px-4 sm:text-base rounded-lg border-2 border-solid bg-dark
+             mt-2 px-6 py-2 text-lg font-semibold
+             sm:px-4 sm:text-base border-2 border-solid bg-dark
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
             dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
             md:p-2 md:px-4 md:text-base
@@ -231,7 +243,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects | By NexTemp</title>
+        <title>Projects | By Fardous</title>
         <meta
           name="description"
           content="NexTemp, A open-source portfolio theme built with Nextjs"
@@ -248,38 +260,42 @@ export default function Projects() {
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12">
+            {/* featured project */}
+            {/* <div className="col-span-12">
               <FeaturedProject
-                type="Design & Development"
-                tools="HTML | CSS | JavaScript | Gatsby"
-                title="Clay - Gatsby Theme"
-                summary="Image-centric Gatsby theme for publishers, portfolio, photographers blogs and more."
+                type="Fullstack Development"
+                tools="Next.js | shadcn/ui | Firestore | Tailwind CSS | Firebase"
+                title="EGtracker"
+                summary="EGtracker is a finance tracker that helps users manage their income and expenses effortlessly. It features transaction tracking, an interactive dashboard, and an intuitive UI for better financial insights."
                 img={proj1}
                 date="2023"
-                link="/projects/clay-gatsby-theme"
-                github="https://travislord.xyz/projects/clay-gatsby-theme"
+                link="https://egtracker.vercel.app/"
+                github="https://github.com/Fardous-Alom/EGtracker"
+              />
+            </div> */}
+            {/* other projects */}
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Frontend Development"
+                tools="React | Tailwind CSS | Radix UI"
+                title="DrowIt"
+                summary="DrowIt is a simple yet powerful drawing app that allows users to sketch, doodle, and create digital artwork with ease. It features an intuitive interface, customizable brush settings, and a smooth drawing experience, making it perfect for artists of all levels."
+                img={drowit}
+                date="2023"
+                link="https://drowit.netlify.app/"
+                github="https://github.com/Fardous-Alom/drawit"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Design & Development"
-                tools="HTML | CSS | JavaScript | Gatsby"
-                title="Clay - Gatsby Theme"
-                img={proj1}
-                date="2023"
-                link="/projects/clay-gatsby-theme"
-                github="https://travislord.xyz/projects/clay-gatsby-theme"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Design & Development"
-                tools="HTML | CSS | JavaScript | Gatsby"
-                title="Clay - Gatsby Theme"
-                img={proj1}
-                date="2023"
-                link="/projects/clay-gatsby-theme"
-                github="https://travislord.xyz/projects/clay-gatsby-theme"
+                type="Frontend Development"
+                tools="React | Bootstrap"
+                title="Kanban Board "
+                summary="Kanban board is a task management tool that helps users organize their work visually using columns and cards. It allows users to create tasks, move them across different stages (e.g., To-Do, In Progress, Done), and manage their workflow efficiently. Ideal for teams and individuals, it streamlines productivity with a simple and interactive interface."
+                img={kanban}
+                date="2024"
+                link="https://knbnboard.netlify.app/"
+                github="https://github.com/Fardous-Alom/kanban-board"
               />
             </div>
           </div>
@@ -297,7 +313,7 @@ export default function Projects() {
 
             <div className="mt-2 flex items-center justify-between gap-3 grid-cols-2">
               <Link
-                href="/articles/"
+                href="/"
                 target={"_self"}
                 className={`flex items-center rounded-lg border-2 border-solid bg-light p-2.5 px-6 text-lg font-semibold
             capitalize text-dark hover:border-light hover:bg-dark hover:text-light 
@@ -305,7 +321,7 @@ export default function Projects() {
             md:p-2 md:px-4 md:text-base
              `}
               >
-                View Articles
+                Home
               </Link>
               <Link
                 href="/about/"

@@ -64,28 +64,13 @@ export default function About() {
                 BIOGRAPHY
               </h2>
               <p className="font-medium ">
-                I'm Riley, a dedicated web developer based in Bangladesh, where
+                I'm Fardous, a dedicated web developer based in Bangladesh, where
                 I specialize in creating dynamic and user-centric web
                 experiences. With over a decade of experience in the industry, I
                 have honed my skills in both front-end and back-end
                 technologies, allowing me to deliver responsive and
                 high-performance websites and applications.
               </p>
-              {/* <p className="my-4 font-medium">
-                At Stellar Innovations, I've had the opportunity to work on
-                numerous high-profile projects that have challenged and expanded
-                my expertise. My technical skill set includes HTML, CSS,
-                JavaScript, React, and Node.js, among other technologies. One of
-                my notable projects involved developing a comprehensive
-                e-commerce platform that streamlined the user experience and
-                significantly boosted the client's sales. Another project I’m
-                particularly proud of was creating an interactive web
-                application for a major event, which received widespread acclaim
-                for its intuitive design and seamless performance.
-              </p> */}
-              {/* <p className="my-4 font-medium">
-                P.s I'm a big fan of anime and not a real person ✌️.
-              </p> */}
             </div>
             <div
               className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
@@ -114,7 +99,7 @@ export default function About() {
             >
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={1461} />+
+                  <AnimatedNumberFramerMotion value={1161} />+
                 </span>
                 <h3
                   className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
