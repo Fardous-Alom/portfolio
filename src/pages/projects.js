@@ -10,6 +10,7 @@ import { FaGithub } from "react-icons/fa";
 import proj1 from "../../public/images/projects/clay-theme.png";
 import drowit from "../../public/images/projects/drowit.png";
 import kanban from "../../public/images/projects/kanban.png";
+import egtracker from "../../public/images/projects/egtracker.png";
 import loading from "../../public/images/articles/GTA6-VICE.gif";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useMotionValue } from "framer-motion";
@@ -296,6 +297,18 @@ export default function Projects() {
                 date="2024"
                 link="https://knbnboard.netlify.app/"
                 github="https://github.com/Fardous-Alom/kanban-board"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Frontend Development"
+                tools="React | Bootstrap"
+                title="EGtracker"
+                summary="EGtracker is a smart expense-tracking app that helps users manage their finances effortlessly. With intuitive categorization, real-time updates, and secure authentication."
+                img={egtracker}
+                date="2024"
+                link="https://egtraker.netlify.app/"
+                github="https://github.com/Fardous-Alom/EGtracker"
               />
             </div>
           </div>
