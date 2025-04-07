@@ -1,0 +1,27 @@
+name: Twice-a-Day Commit Bot 🌿
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # 10:00 AM BST
+    - cron: '0 10 * * *' # 4:00 PM BST
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update file with timestamp
+        run: |
+          echo "Last update: $(date -u) UTC" >> log.md
+          echo "---" >> log.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add log.md
+          git commit -m "chore: auto-update at $(date -u) 🌱" || echo "No changes to commit"
+          git push
