@@ -1,4 +1,4 @@
-name: Twice-a-Day Commit
+name: Twice-a-Day Commit Bot 🌿
 
 on:
   schedule:
@@ -22,6 +22,8 @@ jobs:
         run: |
           git config --global user.name "Fardous-Alom"
           git config --global user.email "fardousalom42@gmail.com"
+
+          git pull --rebase origin main
           git add log.md
           git commit -m "chore: auto-update at $(date -u) 🌱" || echo "No changes to commit"
-          git push
+          git push origin main
