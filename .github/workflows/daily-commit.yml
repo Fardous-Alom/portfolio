@@ -2,28 +2,31 @@ name: Twice-a-Day Commit Bot 🌿
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # 10:00 AM BST
-    - cron: '0 10 * * *' # 4:00 PM BST
-  workflow_dispatch:
+    - cron: '0 4 * * *'   # Runs every day at 10:00 AM BST
+    - cron: '0 10 * * *'  # Runs every day at 4:00 PM BST
+  workflow_dispatch:       # Allows manual triggering from GitHub Actions UI
 
 jobs:
   commit:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
 
-      - name: Update file with timestamp
+    steps:
+      - name: 🔄 Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Important! Get full commit history so we can pull/rebase
+
+      - name: 🕒 Update timestamp in log.md
         run: |
           echo "Last update: $(date -u) UTC" >> log.md
           echo "---" >> log.md
 
-      - name: Commit and push changes
+      - name: ✅ Commit and push changes
         run: |
           git config --global user.name "Fardous-Alom"
           git config --global user.email "fardousalom42@gmail.com"
 
-          git pull --rebase origin main
+          git pull --rebase origin main     # 🔥 Avoid non-fast-forward errors
           git add log.md
           git commit -m "chore: auto-update at $(date -u) 🌱" || echo "No changes to commit"
           git push origin main
