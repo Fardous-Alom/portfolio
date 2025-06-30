@@ -1,37 +1,37 @@
-name: Twice-a-Day Commit
+# name: Twice-a-Day Commit
 
-on:
-  schedule:
-    - cron: '0 4 * * *'   # 10:00 AM BST
-    - cron: '0 10 * * *'  # 4:00 PM BST
-  workflow_dispatch:
+# on:
+#   schedule:
+#     - cron: '0 4 * * *'   # 10:00 AM BST
+#     - cron: '0 10 * * *'  # 4:00 PM BST
+#   workflow_dispatch:
 
-jobs:
-  commit:
-    runs-on: ubuntu-latest
+# jobs:
+#   commit:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: 🔄 Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Needed for full git history to pull/rebase
+#     steps:
+#       - name: 🔄 Checkout repository
+#         uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 0  # Needed for full git history to pull/rebase
 
-      - name: 🧠 Setup Git identity
-        run: |
-          git config --global user.name "Fardous-Alom"
-          git config --global user.email "fardousalom42@gmail.com"
+#       - name: 🧠 Setup Git identity
+#         run: |
+#           git config --global user.name "Fardous-Alom"
+#           git config --global user.email "fardousalom42@gmail.com"
 
-      - name: 🔁 Pull latest changes before updating
-        run: |
-          git pull --rebase origin main
+#       - name: 🔁 Pull latest changes before updating
+#         run: |
+#           git pull --rebase origin main
 
-      - name: 📝 Update file with timestamp
-        run: |
-          echo "Last update: $(date -u) UTC" >> log.md
-          echo "---" >> log.md
+#       - name: 📝 Update file with timestamp
+#         run: |
+#           echo "Last update: $(date -u) UTC" >> log.md
+#           echo "---" >> log.md
 
-      - name: ✅ Commit and push changes
-        run: |
-          git add log.md
-          git commit -m "chore: auto-update at $(date -u) 🌱" || echo "No changes to commit"
-          git push origin main
+#       - name: ✅ Commit and push changes
+#         run: |
+#           git add log.md
+#           git commit -m "chore: auto-update at $(date -u) 🌱" || echo "No changes to commit"
+#           git push origin main
