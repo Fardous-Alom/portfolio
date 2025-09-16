@@ -9,7 +9,7 @@ import Contact from '../components/home/Contact'
 
 function Home() {
   return (
-    <div className='min-h-screen w-6xl mx-auto overflow-hidden'>
+    <div className='min-h-screen w-full max-w-6xl mx-auto overflow-hidden'>
       <Profile />
       <About />
       <Projects />

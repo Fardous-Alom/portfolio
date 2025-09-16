@@ -18,8 +18,8 @@ function Header() {
   };
 
   return (
-    <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
-      <nav className="my-4 relative max-w-6xl w-full border rounded-[24px] mx-2 flex flex-wrap md:flex-nowrap items-center justify-between p-1 ps-4 md:py-0 sm:mx-auto backdrop-blur-md bg-white/70 dark:bg-gray-900/70 border-b border-gray-200 dark:border-gray-600">
+    <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm ">
+      <nav className="my-4 relative max-w-6xl w-full border rounded-[24px] mx-2 flex flex-wrap md:flex-nowrap items-center justify-between p-1 ps-4 md:py-0 sm:mx-auto backdrop-blur-md bg-white/70 dark:bg-gray-900/70 border-b border-gray-200 dark:border-gray-600 px-4 md:px-6 lg:px-10">
         <div className="flex items-center">
           {/* Logo */}
           <Link to="/" aria-label="Fardous">
@@ -60,7 +60,7 @@ function Header() {
 
         <div
           id="hs-navbar-header-floating"
-          className={`${isMenuOpen ? 'block' : 'hidden'} md:block absolute top-full left-0 right-0 z-50 bg-white dark:bg-neutral-900 shadow-lg rounded-b-2xl mx-2 md:shadow-none md:bg-transparent md:dark:bg-transparent md:static md:mx-0`}
+          className={`${isMenuOpen ? 'block' : 'hidden'} md:block absolute top-full left-0 right-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-lg rounded-b-2xl mx-2 md:shadow-none md:bg-transparent md:dark:bg-transparent md:static md:mx-0`}
           aria-labelledby="hs-navbar-header-floating-collapse"
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 py-2 px-4 md:px-0 md:py-0 md:ps-7">
