@@ -23,7 +23,9 @@ function Header() {
         <div className="flex items-center">
           {/* Logo */}
           <Link to="/" aria-label="Fardous">
-            <h1 className="text-gray-900 dark:text-gray-100 font-bold text-xl">Fardous</h1>
+            <h1 className="text-gray-900 dark:text-gray-100 font-bold text-xl">
+              Fardous
+            </h1>
           </Link>
           {/* End Logo */}
         </div>
@@ -60,7 +62,9 @@ function Header() {
 
         <div
           id="hs-navbar-header-floating"
-          className={`${isMenuOpen ? 'block' : 'hidden'} md:block absolute top-full left-0 right-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-lg rounded-b-2xl mx-2 md:shadow-none md:bg-transparent md:dark:bg-transparent md:static md:mx-0`}
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } md:block absolute top-full left-0 right-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-lg rounded-b-2xl mx-2 md:shadow-none md:bg-transparent md:dark:bg-transparent md:static md:mx-0`}
           aria-labelledby="hs-navbar-header-floating-collapse"
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 py-2 px-4 md:px-0 md:py-0 md:ps-7">
@@ -73,16 +77,23 @@ function Header() {
             </Link>
             <Link
               className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200 font-semibold"
-              to="/work"
+              to="/works"
             >
               Work
             </Link>
-            <Link
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200 font-semibold"
-              to="/reviews"
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200 font-semibold cursor-pointer"
             >
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       </nav>

@@ -5,7 +5,6 @@ import Projects from '../components/home/Projects'
 import Skills from '../components/home/Skills'
 import Experience from '../components/home/Experience'
 import Education from '../components/home/Education'
-import Contact from '../components/home/Contact'
 
 function Home() {
   return (
@@ -16,7 +15,6 @@ function Home() {
       <Skills />
       <Experience />
       <Education />
-      <Contact />
     </div>
   )
 }

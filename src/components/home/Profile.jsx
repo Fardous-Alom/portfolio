@@ -3,7 +3,10 @@ import avatar from "/src/assets/images/home/fardous.png";
 
 function Profile() {
   return (
-    <div className="flex items-center gap-x-3 px-4 md:px-6 lg:px-10 py-5">
+    <div
+      className="flex items-center gap-x-3 px-4 md:px-6 lg:px-10 py-5"
+      id="home"
+    >
       <div className="shrink-0">
         <img
           className="shrink-0 size-16 md:size-32  rounded-full"
