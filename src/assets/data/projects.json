@@ -1,0 +1,83 @@
+projects = [
+    {
+        "id": 1,
+        "title": "Drowit - Drawing App",
+        "tech_stack": ["Next.js", "TypeScript", "Zod", "Radix UI", "Recharts", "Sonner"],
+        "description": "A modern drawing app built with Next.js and TypeScript, featuring advanced UI, validation, and data visualization.",
+        "image": "drowit.png",
+        "live_link": "https://drowit.netlify.app/",
+        "github_link": "#"
+    },
+    {
+        "id": 2,
+        "title": "Task Flow - Task Management App",
+        "tech_stack": ["React", "Redux Toolkit", "D3", "Recharts", "Tailwind", "Framer Motion"],
+        "description": "A task management platform with interactive dashboards, charts, and smooth animations.",
+        "image": "taskflow.png",
+        "live_link": "https://tsk-fl0w.netlify.app/",
+        "github_link": "#"
+    },
+    {
+        "id": 3,
+        "title": "Bazaar - E-Commerce Platform",
+        "tech_stack": ["React", "Redux", "Tailwind"],
+        "description": "A fully functional e-commerce frontend with product browsing, cart, and checkout flow.",
+        "image": "bazaar.png",
+        "live_link": "https://0bazaar.vercel.app/",
+        "github_link": "#"
+    },
+    {
+        "id": 4,
+        "title": "FinTrack - Expense Tracker",
+        "tech_stack": ["MERN", "Tailwind", "Chart.js"],
+        "description": "A personal finance tracker with CRUD operations, JWT authentication, and Chart.js insights.",
+        "image": "fintrack.png",
+        "live_link": "https://egtracker.vercel.app/",
+        "github_link": "#"
+    },
+    {
+        "id": 5,
+        "title": "CineFlow - Movie Streaming Website",
+        "tech_stack": ["React", "REST API", "Tailwind"],
+        "description": "A Netflix-style streaming site with dynamic API data, filters, and detailed movie pages.",
+        "image": "cineflow.png",
+        "live_link": "https://cineflo.netlify.app/",
+        "github_link": "#"
+    },
+    {
+        "id": 6,
+        "title": "Content Hub - Blog App",
+        "tech_stack": ["React Router", "Axios", "Tailwind", "Radix UI"],
+        "description": "A blogging app with dynamic content fetching, smooth navigation, and enhanced UI components.",
+        "image": "contenthub.png",
+        "live_link": "https://c0ntent-hub.netlify.app/",
+        "github_link": "#"
+    },
+    {
+        "id": 7,
+        "title": "Homez - Real Estate Landing Page",
+        "tech_stack": ["React", "Tailwind", "GSAP"],
+        "description": "A high-converting real estate landing page with GSAP animations and responsive design.",
+        "image": "homez.png",
+        "live_link": "https://h0mez.netlify.app/",
+        "github_link": "#"
+    },
+    {
+        "id": 8,
+        "title": "GTA Landing Page",
+        "tech_stack": ["React", "Tailwind", "GSAP"],
+        "description": "A gaming-themed landing page with immersive GSAP animations and responsive layout.",
+        "image": "gta.png",
+        "live_link": "https://gta0.netlify.app/",
+        "github_link": "#"
+    },
+    {
+        "id": 9,
+        "title": "E-Gmail - AI SaaS Landing Page",
+        "tech_stack": ["Next.js", "Tailwind"],
+        "description": "A modern SaaS landing page optimized for conversions, built with Next.js and Tailwind CSS.",
+        "image": "egmail.png",
+        "live_link": "https://myegmail.vercel.app/",
+        "github_link": "#"
+    }
+]
