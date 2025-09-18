@@ -1,4 +1,4 @@
-projects = [
+[
     {
         "id": 1,
         "title": "Drowit - Drawing App",
@@ -6,7 +6,7 @@ projects = [
         "description": "A modern drawing app built with Next.js and TypeScript, featuring advanced UI, validation, and data visualization.",
         "image": "drowit.png",
         "live_link": "https://drowit.netlify.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/drawit"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@ projects = [
         "description": "A task management platform with interactive dashboards, charts, and smooth animations.",
         "image": "taskflow.png",
         "live_link": "https://tsk-fl0w.netlify.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/task-flow"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@ projects = [
         "description": "A fully functional e-commerce frontend with product browsing, cart, and checkout flow.",
         "image": "bazaar.png",
         "live_link": "https://0bazaar.vercel.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/bazaar"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@ projects = [
         "description": "A personal finance tracker with CRUD operations, JWT authentication, and Chart.js insights.",
         "image": "fintrack.png",
         "live_link": "https://egtracker.vercel.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/fin-track"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@ projects = [
         "description": "A Netflix-style streaming site with dynamic API data, filters, and detailed movie pages.",
         "image": "cineflow.png",
         "live_link": "https://cineflo.netlify.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/cine-flow"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@ projects = [
         "description": "A blogging app with dynamic content fetching, smooth navigation, and enhanced UI components.",
         "image": "contenthub.png",
         "live_link": "https://c0ntent-hub.netlify.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/content-hub"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@ projects = [
         "description": "A high-converting real estate landing page with GSAP animations and responsive design.",
         "image": "homez.png",
         "live_link": "https://h0mez.netlify.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/homez"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@ projects = [
         "description": "A gaming-themed landing page with immersive GSAP animations and responsive layout.",
         "image": "gta.png",
         "live_link": "https://gta0.netlify.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/gta"
     },
     {
         "id": 9,
@@ -78,6 +78,6 @@ projects = [
         "description": "A modern SaaS landing page optimized for conversions, built with Next.js and Tailwind CSS.",
         "image": "egmail.png",
         "live_link": "https://myegmail.vercel.app/",
-        "github_link": "#"
+        "github_link": "https://github.com/Fardous-Alom/egmail"
     }
 ]

@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaRegMoon, FaSun, FaAlignRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
+  const location = useLocation();
   const [darkMode, setDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activePath, setActivePath] = useState("/");
+
+  useEffect(() => {
+    setActivePath(location.pathname);
+  }, [location]);
 
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
@@ -69,15 +75,24 @@ function Header() {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 py-2 px-4 md:px-0 md:py-0 md:ps-7">
             <Link
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-semibold text-gray-800 hover:text-gray-800 focus:outline-hidden dark:border-neutral-200 dark:text-neutral-200 dark:hover:text-neutral-200"
+              className={`py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 ${
+                activePath === "/"
+                  ? "border-gray-800 text-gray-800 dark:border-neutral-200 dark:text-neutral-200"
+                  : "border-transparent text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+              } font-semibold focus:outline-hidden`}
               to="/"
-              aria-current="page"
+              aria-current={activePath === "/" ? "page" : undefined}
             >
               Home
             </Link>
             <Link
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200 font-semibold"
+              className={`py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 ${
+                activePath === "/works"
+                  ? "border-gray-800 text-gray-800 dark:border-neutral-200 dark:text-neutral-200"
+                  : "border-transparent text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+              } font-semibold focus:outline-hidden`}
               to="/works"
+              aria-current={activePath === "/works" ? "page" : undefined}
             >
               Work
             </Link>
